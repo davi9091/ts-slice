@@ -62,7 +62,6 @@ export class Slice<T> implements Iterable<T> {
       buf.push(callback(this.#buf[i], i))
     }
     return new Slice(buf, 0, buf.length)
-    Array.prototype.reduce
   }
 
   reduce<U>(callback: (accumulator: U, currentValue: T, currentIndex: number, slice: Slice<T>) => U, initialValue: U): U {
